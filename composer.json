@@ -1,0 +1,21 @@
+{
+    "name": "outeredge/magento-config-product-report-module",
+    "type": "magento-module",
+    "description": "Report of all the configurable products without any associated product: Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "bruno@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Outeredge/ConfigProductReport", "app/code/local/Outeredge/ConfigProductReport"],
+            ["app/etc/modules/OuterEdge_ConfigProductReport.xml", "app/etc/modules/OuterEdge_ConfigProductReport.xml"]
+        ]
+    }
+}
