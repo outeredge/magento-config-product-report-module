@@ -14,7 +14,7 @@
     },
     "extra": {
         "map": [
-            ["app/code/local/Outeredge/ConfigProductReport", "app/code/local/Outeredge/ConfigProductReport"],
+            ["app/code/local/OuterEdge/ConfigProductReport", "app/code/local/OuterEdge/ConfigProductReport"],
             ["app/etc/modules/OuterEdge_ConfigProductReport.xml", "app/etc/modules/OuterEdge_ConfigProductReport.xml"]
         ]
     }
