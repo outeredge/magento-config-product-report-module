@@ -10,7 +10,12 @@ class OuterEdge_ConfigProductReport_Block_Adminhtml_Configproductreport_Grid ext
         $collection = Mage::getResourceModel('catalog/product_collection')
             ->addAttributeToFilter('type_id', array('eq' => 'configurable'))
             ->addAttributeToSelect('name');
-        $collection->getSelect()->join(array('relation' => 'catalog_product_relation'), 'relation.parent_id = entity_id');
+        $collection->getSelect()->joinLeft(
+            'catalog_product_super_link',
+            'e.entity_id = catalog_product_super_link.parent_id',
+            array('parent_id')
+        );
+        $collection->getSelect()->where('catalog_product_super_link.parent_id IS NULL');
         $this->setCollection($collection);
         $this->getCollection()->getSelect()->group('entity_id');
 
