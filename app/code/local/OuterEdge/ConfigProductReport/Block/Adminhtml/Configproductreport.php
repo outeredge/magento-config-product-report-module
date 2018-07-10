@@ -29,6 +29,8 @@ class OuterEdge_ConfigProductReport_Block_Adminhtml_Configproductreport extends 
     }
 
     /**
+     * Geting store switcher html.
+     *
      * @return string
      */
     public function getStoreSwitcherHtml()
